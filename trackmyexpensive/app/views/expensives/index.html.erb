@@ -15,16 +15,16 @@
   </thead>
 
   <tbody>
-    <% @expensives.each do |expensife| %>
+    <% @expensives.each do |expensive| %>
       <tr>
-        <td><%= expensife.amount %></td>
-        <td><%= expensife.logdate %></td>
-        <td><%= expensife.note %></td>
-        <td><%= expensife.category %></td>
-        <td><%= expensife.subcategory %></td>
-        <td><%= link_to 'Show', expensife %></td>
-        <td><%= link_to 'Edit', edit_expensife_path(expensife) %></td>
-        <td><%= link_to 'Destroy', expensife, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= expensive.amount %></td>
+        <td><%= expensive.logdate %></td>
+        <td><%= expensive.note %></td>
+        <td><%= expensive.category %></td>
+        <td><%= expensive.subcategory %></td>
+        <td><%= link_to 'Show', expensive %></td>
+        <td><%= link_to 'Edit', edit_expensife_path(expensive) %></td>
+        <td><%= link_to 'Destroy', expensive, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Expensife', new_expensife_path %>
+<%= link_to 'New Expensive', new_expensife_path %>

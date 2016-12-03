@@ -1,5 +1,5 @@
 class ExpensivesController < ApplicationController
-  before_action :set_expensife, only: [:show, :edit, :update, :destroy]
+  before_action :set_expensive, only: [:show, :edit, :update, :destroy]
 
   # GET /expensives
   # GET /expensives.json
@@ -14,7 +14,7 @@ class ExpensivesController < ApplicationController
 
   # GET /expensives/new
   def new
-    @expensife = Expensive.new
+    @expensive = Expensive.new
   end
 
   # GET /expensives/1/edit
@@ -24,15 +24,15 @@ class ExpensivesController < ApplicationController
   # POST /expensives
   # POST /expensives.json
   def create
-    @expensife = Expensive.new(expensife_params)
+    @expensive = Expensive.new(expensive_params)
 
     respond_to do |format|
-      if @expensife.save
-        format.html { redirect_to @expensife, notice: 'Expensive was successfully created.' }
-        format.json { render :show, status: :created, location: @expensife }
+      if @expensive.save
+        format.html { redirect_to @expensive, notice: 'Expensive was successfully created.' }
+        format.json { render :show, status: :created, location: @expensive }
       else
         format.html { render :new }
-        format.json { render json: @expensife.errors, status: :unprocessable_entity }
+        format.json { render json: @expensive.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -41,12 +41,12 @@ class ExpensivesController < ApplicationController
   # PATCH/PUT /expensives/1.json
   def update
     respond_to do |format|
-      if @expensife.update(expensife_params)
-        format.html { redirect_to @expensife, notice: 'Expensive was successfully updated.' }
-        format.json { render :show, status: :ok, location: @expensife }
+      if @expensive.update(expensife_params)
+        format.html { redirect_to @expensive, notice: 'Expensive was successfully updated.' }
+        format.json { render :show, status: :ok, location: @expensive }
       else
         format.html { render :edit }
-        format.json { render json: @expensife.errors, status: :unprocessable_entity }
+        format.json { render json: @expensive.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -54,7 +54,7 @@ class ExpensivesController < ApplicationController
   # DELETE /expensives/1
   # DELETE /expensives/1.json
   def destroy
-    @expensife.destroy
+    @expensive.destroy
     respond_to do |format|
       format.html { redirect_to expensives_url, notice: 'Expensive was successfully destroyed.' }
       format.json { head :no_content }
@@ -63,12 +63,12 @@ class ExpensivesController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_expensife
-      @expensife = Expensive.find(params[:id])
+    def set_expensive
+      @expensive = Expensive.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def expensife_params
-      params.require(:expensife).permit(:amount, :logdate, :note, :category_id, :subcategory_id)
+    def expensive_params
+      params.require(:expensive).permit(:amount, :logdate, :note, :category_id, :subcategory_id)
     end
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161202025801) do
+ActiveRecord::Schema.define(version: 20161203170625) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,18 @@ ActiveRecord::Schema.define(version: 20161202025801) do
     t.datetime "updated_at",             null: false
   end
 
+  create_table "expensives", force: :cascade do |t|
+    t.decimal  "amount"
+    t.string   "logdate"
+    t.text     "note"
+    t.integer  "category_id"
+    t.integer  "subcategory_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.index ["category_id"], name: "index_expensives_on_category_id", using: :btree
+    t.index ["subcategory_id"], name: "index_expensives_on_subcategory_id", using: :btree
+  end
+
   create_table "subcategories", force: :cascade do |t|
     t.string   "Name"
     t.datetime "created_at",  null: false
@@ -29,5 +41,7 @@ ActiveRecord::Schema.define(version: 20161202025801) do
     t.index ["category_id"], name: "index_subcategories_on_category_id", using: :btree
   end
 
+  add_foreign_key "expensives", "categories"
+  add_foreign_key "expensives", "subcategories"
   add_foreign_key "subcategories", "categories"
 end
