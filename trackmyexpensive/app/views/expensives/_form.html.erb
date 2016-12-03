@@ -1,44 +1,45 @@
 <%= form_for(expensive) do |f| %>
-  <% if expensive.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(expensive.errors.count, "error") %> prohibited this expensife from being saved:</h2>
+    <% if expensive.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(expensive.errors.count, "error") %> prohibited this expensife from being saved:</h2>
 
-      <ul>
-      <% expensive.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+          <ul>
+            <% expensive.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :amount %>
+      <%= f.text_field :amount %>
     </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :amount %>
-    <%= f.text_field :amount %>
-  </div>
+    <div class="field">
+      <%= f.label :logdate %>
+      <%= f.text_field :logdate %>
+    </div>
 
-  <div class="field">
-    <%= f.label :logdate %>
-    <%= f.text_field :logdate %>
-  </div>
+    <div class="field">
+      <%= f.label :note %>
+      <%= f.text_area :note %>
+    </div>
 
-  <div class="field">
-    <%= f.label :note %>
-    <%= f.text_area :note %>
-  </div>
+    <div class="field">
+      <%= f.label :Category %><br/>
+      <%= f.collection_select(:category_id, Category.all, :id, :Name) %>
 
-  <div class="field">
-    <%= f.label :Category %><br />
-    <%= f.collection_select(:category_id, Category.all, :id, :Name ) %>
+    </div>
 
-  </div>
-
-  <div class="field">
-    <%= f.label :Subcategory %><br />
-    <%= f.collection_select(:subcategory_id, Subcategory.all, :id, :Name ) %>
-
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="field">
+      <%= f.label :Subcategory %><br/>
+      <%= f.collection_select(:subcategory_id, Subcategory.all, :id, :Name) %>
+    </div>
+    <div class="field js-new-subcategory">
+      <%= link_to "New Subcategory", new_subcategory_path %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
 <% end %>
