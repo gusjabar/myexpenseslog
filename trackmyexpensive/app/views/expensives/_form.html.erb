@@ -1,0 +1,42 @@
+<%= form_for(expensife) do |f| %>
+  <% if expensife.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(expensife.errors.count, "error") %> prohibited this expensife from being saved:</h2>
+
+      <ul>
+      <% expensife.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :amount %>
+    <%= f.text_field :amount %>
+  </div>
+
+  <div class="field">
+    <%= f.label :logdate %>
+    <%= f.text_field :logdate %>
+  </div>
+
+  <div class="field">
+    <%= f.label :note %>
+    <%= f.text_area :note %>
+  </div>
+
+  <div class="field">
+    <%= f.label :category_id %>
+    <%= f.text_field :category_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :subcategory_id %>
+    <%= f.text_field :subcategory_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

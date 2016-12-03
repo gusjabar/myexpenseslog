@@ -1,0 +1,1 @@
+json.partial! "expensives/expensife", expensife: @expensife

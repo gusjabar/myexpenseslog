@@ -1,0 +1,1 @@
+json.array! @expensives, partial: 'expensives/expensife', as: :expensife

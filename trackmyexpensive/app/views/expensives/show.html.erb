@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @expensife.amount %>
+</p>
+
+<p>
+  <strong>Logdate:</strong>
+  <%= @expensife.logdate %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @expensife.note %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @expensife.category %>
+</p>
+
+<p>
+  <strong>Subcategory:</strong>
+  <%= @expensife.subcategory %>
+</p>
+
+<%= link_to 'Edit', edit_expensife_path(@expensife) %> |
+<%= link_to 'Back', expensives_path %>
