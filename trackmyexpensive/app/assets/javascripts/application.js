@@ -11,6 +11,23 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery-ui/widgets/datepicker
 //= require jquery_ujs
+//= require bootstrap-sprockets
+//= require filterrific/filterrific-jquery
 //= require turbolinks
-//= require_tree .
+//= require select2
+//= require bootbox
+//= require_tree ./app/services
+//= require_tree ./app/controllers
+
+
+$(document).ready(function() {
+    window.ExpensiveIndexController.init();
+    window.CategoriesIndexController.init();
+    $('select').select2({
+        theme: "bootstrap"
+    });
+
+});
+

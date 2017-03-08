@@ -1,26 +1,17 @@
 <h1>Listing Categories</h1>
-<%= link_to "New Category", new_category_path %>
-<table>
-  <tr>
-    <th>Name</th>
-    <th>SubCategories</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-  <% @categories.each do |category| %>
-      <tr>
-        <td><%= category.Name %></td>
-        <td><%= category.id %></td>
-        <td><%= link_to "Show", category_path(category) %></td>
-        <td><%= link_to "Edit", edit_category_path(category) %></td>
-        <td><%= link_to "Edit", (category) %></td>
-        <td><%= link_to "Remove", category, method: :delete, data: { confirm: "Are you sure?" } %></td>
-      </tr>
-  <% end %>
-</table>
+<hr>
+<button class="btn btn-primary" id="btnAddNewSubcategory"><i class="fa fa-plus" aria-hidden="true"></i> New Subcategory</button><br>
 <br>
-<div id="content"></div>
+<div class="row">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <%= render(
+              partial: 'categories/list',
+              locals: {categories: @categories}
+          ) %>
+    </div>
+  </div>
+</div>
+<div id="SubcategoryModal">
 
-  <%= link_to "New SubCategory", new_subcategory_path %>
+</div>

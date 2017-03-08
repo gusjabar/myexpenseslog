@@ -1,45 +1,50 @@
-<%= form_for(expensive) do |f| %>
-    <% if expensive.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(expensive.errors.count, "error") %> prohibited this expensife from being saved:</h2>
+<%= form_for @expensive, :html => {:class => "form-horizontal"} do |f| %>
+    <div class="form-group">
+      <% if expensive.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(expensive.errors.count, "error") %> prohibited this expensife from being saved:</h2>
 
-          <ul>
-            <% expensive.errors.full_messages.each do |message| %>
-                <li><%= message %></li>
-            <% end %>
-          </ul>
-        </div>
-    <% end %>
-
-    <div class="field">
-      <%= f.label :amount %>
-      <%= f.text_field :amount %>
+            <ul>
+              <% expensive.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+      <% end %>
+    </div>
+    <div class="field form-group">
+      <%= f.label :amount, :class => "control-label" %>
+      <%= f.number_field :amount, :class => "form-control", min: 0 %>
     </div>
 
-    <div class="field">
-      <%= f.label :logdate %>
-      <%= f.text_field :logdate %>
+    <div class="field form-group">
+      <%= f.label :logdate, :class => "control-label" %>
+      <div class="calendar-pickup">
+        <%= f.text_field :logdate, :class => "datepicker form-control", placeholder: "MM/dd/yyyy" %>
+      </div>
     </div>
 
-    <div class="field">
-      <%= f.label :note %>
-      <%= f.text_area :note %>
+    <div class="field form-group">
+      <%= f.label :note, :class => "control-label" %>
+      <%= f.text_area :note, :class => "form-control" %>
     </div>
 
-    <div class="field">
-      <%= f.label :Category %><br/>
-      <%= f.collection_select(:category_id, Category.all, :id, :Name) %>
+    <div class="field form-group">
+      <%= f.label :Category, :class => "control-label" %><br/>
+      <%= f.collection_select(:category_id, Category.all, :id, :name, {include_blank: "Select a Category"}, {:class => "form-control"}) %>
 
     </div>
 
-    <div class="field">
-      <%= f.label :Subcategory %><br/>
-      <%= f.collection_select(:subcategory_id, Subcategory.all, :id, :Name) %>
+    <div class="field form-group">
+      <%= f.label :Subcategory, :class => "control-label" %><br/>
+      <%= f.collection_select(:subcategory_id, {}, :id, :Name, {include_blank: "Select a Subcategory"}, :class => "form-control") %>
     </div>
-    <div class="field js-new-subcategory">
-      <%= link_to "New Subcategory", new_subcategory_path %>
+    <div class="js-new-subcategory form-group">
+      <%= link_to "New Subcategory", new_subcategory_path, class: "btn btn-primary" %>
     </div>
-    <div class="actions">
-      <%= f.submit %>
+    <div class="form-group text-right">
+      <%= button_tag type: 'submit', class: "btn btn-primary" do %>
+          <i class="fa fa-floppy-o" aria-hidden="true"></i> Save
+      <% end %>
     </div>
 <% end %>

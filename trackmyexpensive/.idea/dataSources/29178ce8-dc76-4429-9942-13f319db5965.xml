@@ -1,93 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="PostgreSQL - postgres@localhost">
-  <database-model serializer="dbm" rdbms="POSTGRES" format-version="2.6">
-    <database id="1" name="postgres">
-      <object-id>12141</object-id>
-      <visible>1</visible>
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.0">
+    <root id="1"/>
+    <database id="2" parent="1" name="postgres">
+      <ObjectId>12141</ObjectId>
+      <Visible>1</Visible>
     </database>
-    <database id="2" name="orion_services_v2_development">
-      <object-id>16397</object-id>
+    <database id="3" parent="1" name="orion_services_v2_development">
+      <ObjectId>16397</ObjectId>
     </database>
-    <database id="3" name="orion_services_v2_test">
-      <object-id>16398</object-id>
+    <database id="4" parent="1" name="orion_services_v2_test">
+      <ObjectId>16398</ObjectId>
     </database>
-    <database id="4" name="orion_services_v3_development">
-      <object-id>16399</object-id>
+    <database id="5" parent="1" name="orion_services_v3_development">
+      <ObjectId>16399</ObjectId>
     </database>
-    <database id="5" name="orion_services_v3_test">
-      <object-id>16428</object-id>
+    <database id="6" parent="1" name="orion_services_v3_test">
+      <ObjectId>16428</ObjectId>
     </database>
-    <database id="6" name="orion_web_rethinkdb_v1__development">
-      <object-id>16458</object-id>
+    <database id="7" parent="1" name="orion_web_rethinkdb_v1__development">
+      <ObjectId>16458</ObjectId>
     </database>
-    <database id="7" name="orion_web_rethinkdb_v1_test">
-      <object-id>16459</object-id>
+    <database id="8" parent="1" name="orion_web_rethinkdb_v1_test">
+      <ObjectId>16459</ObjectId>
     </database>
-    <schema id="8" parent="1" name="public">
-      <object-id>2200</object-id>
-      <visible>1</visible>
-      <introspection-state-number>688</introspection-state-number>
-      <introspection-timestamp>2016-11-22.19:32:59.330</introspection-timestamp>
+    <schema id="9" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2016-11-22.19:32:59.330</IntrospectionTimestamp>
+      <IntrospectionStateNumber>688</IntrospectionStateNumber>
+      <Visible>1</Visible>
     </schema>
-    <schema id="9" parent="1" name="pg_catalog">
-      <object-id>11</object-id>
+    <schema id="10" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
     </schema>
-    <schema id="10" parent="1" name="pg_toast">
-      <object-id>99</object-id>
+    <schema id="11" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
     </schema>
-    <schema id="11" parent="1" name="pg_temp_1">
-      <object-id>11320</object-id>
+    <schema id="12" parent="2" name="pg_temp_1">
+      <ObjectId>11320</ObjectId>
     </schema>
-    <schema id="12" parent="1" name="pg_toast_temp_1">
-      <object-id>11321</object-id>
+    <schema id="13" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11321</ObjectId>
     </schema>
-    <schema id="13" parent="1" name="information_schema">
-      <object-id>11591</object-id>
+    <schema id="14" parent="2" name="information_schema">
+      <ObjectId>11591</ObjectId>
     </schema>
-    <sequence id="14" parent="8" name="geolocations_id_seq">
-      <object-id>16385</object-id>
-      <state-number>687</state-number>
+    <sequence id="15" parent="9" name="geolocations_id_seq">
+      <ObjectId>16385</ObjectId>
+      <StateNumber>687</StateNumber>
     </sequence>
-    <table id="15" parent="8" name="geolocations">
-      <object-id>16387</object-id>
-      <state-number>687</state-number>
+    <table id="16" parent="9" name="geolocations">
+      <ObjectId>16387</ObjectId>
+      <StateNumber>687</StateNumber>
     </table>
-    <column id="16" parent="15" name="id">
-      <state-number>687</state-number>
-      <mandatory>1</mandatory>
-      <data-type>integer|0</data-type>
-      <default-expression>nextval(&apos;geolocations_id_seq&apos;::regclass)</default-expression>
+    <column id="17" parent="16" name="id">
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>687</StateNumber>
+      <DefaultExpression>nextval(&apos;geolocations_id_seq&apos;::regclass)</DefaultExpression>
     </column>
-    <column id="17" parent="15" name="latitude">
-      <state-number>687</state-number>
-      <mandatory>1</mandatory>
-      <data-type>numeric|0</data-type>
+    <column id="18" parent="16" name="latitude">
+      <DataType>numeric|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>687</StateNumber>
     </column>
-    <column id="18" parent="15" name="longitude">
-      <state-number>687</state-number>
-      <data-type>numeric|0</data-type>
+    <column id="19" parent="16" name="longitude">
+      <DataType>numeric|0</DataType>
+      <StateNumber>687</StateNumber>
     </column>
-    <column id="19" parent="15" name="column_4">
-      <state-number>687</state-number>
-      <data-type>integer|0</data-type>
+    <column id="20" parent="16" name="column_4">
+      <DataType>integer|0</DataType>
+      <StateNumber>687</StateNumber>
     </column>
-    <index id="20" parent="15" name="geolocations_id_uindex">
-      <object-id>16396</object-id>
-      <columns>id</columns>
-      <desc-columns></desc-columns>
-      <unique>1</unique>
+    <index id="21" parent="16" name="geolocations_id_uindex">
+      <ObjectId>16396</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
     </index>
-    <index id="21" parent="15" name="geolocations_pkey">
-      <object-id>16394</object-id>
-      <columns>id</columns>
-      <desc-columns></desc-columns>
-      <unique>1</unique>
+    <index id="22" parent="16" name="geolocations_pkey">
+      <ObjectId>16394</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
     </index>
-    <key id="22" parent="15" name="geolocations_pkey">
-      <object-id>16395</object-id>
-      <columns>id</columns>
-      <underlying-index>geolocations_pkey</underlying-index>
-      <primary>1</primary>
+    <key id="23" parent="16" name="geolocations_pkey">
+      <ObjectId>16395</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>geolocations_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
     </key>
   </database-model>
 </dataSource>

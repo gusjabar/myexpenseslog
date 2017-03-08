@@ -4,7 +4,32 @@ class ExpensivesController < ApplicationController
   # GET /expensives
   # GET /expensives.json
   def index
-    @expensives = Expensive.all
+    #@expensives = Expensive.page(params[:page])
+    @filterrific = initialize_filterrific(
+        Expensive,
+        params[:filterrific],
+        select_options: {
+            sorted_by: Expensive.options_for_sorted_by,
+            with_category_id: Category.options_for_select
+        },
+        persistence_id: 'shared_key',
+        default_filter_params: {}
+    # available_filters: [],
+    ) or return
+    @expensives = Expensive.filterrific_find(@filterrific).page(params[:page])
+
+    #@expensives = @filterrific.find.page(params[:page])
+
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
+
+  rescue ActiveRecord::RecordNotFound => e
+    # There is an issue with the persisted param_set. Reset it.
+    puts "Had to reset filterrific params: #{ e.message }"
+    redirect_to(reset_filterrific_url(format: :html)) and return
   end
 
   # GET /expensives/1
@@ -13,8 +38,13 @@ class ExpensivesController < ApplicationController
   end
 
   # GET /expensives/new
+
   def new
     @expensive = Expensive.new
+    respond_to do |format|
+      format.html { render layout: false }
+      format.json { render json: @expensive }
+    end
   end
 
   # GET /expensives/1/edit
@@ -26,12 +56,14 @@ class ExpensivesController < ApplicationController
   def create
     @expensive = Expensive.new(expensive_params)
 
-    respond_to do |format|
-      if @expensive.save
-        format.html { redirect_to @expensive, notice: 'Expensive was successfully created.' }
-        format.json { render :show, status: :created, location: @expensive }
-      else
-        format.html { render :new }
+
+    if @expensive.save
+      #format.html { redirect_to @expensive, notice: 'Expensive was successfully created.' }
+      #format.json { render :show, status: :created, location: @expensive }
+      redirect_to expensives_url
+    else
+      #format.html { render :new }
+      respond_to do |format|
         format.json { render json: @expensive.errors, status: :unprocessable_entity }
       end
     end
@@ -40,12 +72,14 @@ class ExpensivesController < ApplicationController
   # PATCH/PUT /expensives/1
   # PATCH/PUT /expensives/1.json
   def update
-    respond_to do |format|
-      if @expensive.update(expensife_params)
-        format.html { redirect_to @expensive, notice: 'Expensive was successfully updated.' }
-        format.json { render :show, status: :ok, location: @expensive }
-      else
-        format.html { render :edit }
+
+    if @expensive.update(expensive_params)
+      #format.html { redirect_to @expensive, notice: 'Expensive was successfully updated.' }
+      #format.json { render :show, status: :ok, location: @expensive }
+      redirect_to expensives_url
+    else
+      respond_to do |format|
+        #format.html { render :edit }
         format.json { render json: @expensive.errors, status: :unprocessable_entity }
       end
     end
@@ -62,13 +96,14 @@ class ExpensivesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_expensive
-      @expensive = Expensive.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_expensive
+    @expensive = Expensive.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def expensive_params
-      params.require(:expensive).permit(:amount, :logdate, :note, :category_id, :subcategory_id)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def expensive_params
+    params.require(:expensive).permit(:amount, :logdate, :note, :category_id, :subcategory_id)
+  end
+
 end

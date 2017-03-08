@@ -1,0 +1,127 @@
+<!-- Filter -->
+<div class="cd-filter">
+  <%= form_for_filterrific @filterrific do |f| %>
+      <%= link_to(
+              'Reset filters',
+              reset_filterrific_url,
+              class: "js-reset-filter",
+              remote: true
+          ) %>
+      <div class="cd-filter-block">
+        <h4>Search</h4>
+        <div class="cd-filter-content search-input">
+          <%= f.text_field(
+                  :search_query,
+                  class: 'filterrific-periodically-observed form-control',
+                  type: 'search',
+                  placeholder: "Search in my notes..."
+              ) %>
+          <!-- </label>-->
+        </div> <!-- cd-filter-content -->
+      </div> <!-- cd-filter-block -->
+
+      <div class="cd-filter-block hidden">
+        <h4>Months</h4>
+
+        <ul class="cd-filter-content cd-filters list">
+          <li>
+            <input class="filter" data-filter=".check1" type="checkbox" id="checkbox1">
+            <label class="checkbox-label" for="checkbox1">January</label>
+          </li>
+
+          <li>
+            <input class="filter" data-filter=".check2" type="checkbox" id="checkbox2">
+            <label class="checkbox-label" for="checkbox2">February</label>
+          </li>
+
+          <li>
+            <input class="filter" data-filter=".check3" type="checkbox" id="checkbox3">
+            <label class="checkbox-label" for="checkbox3">March</label>
+          </li>
+          <li>
+            <input class="filter" data-filter=".check3" type="checkbox" id="checkbox3">
+            <label class="checkbox-label" for="checkbox3">April</label>
+          </li>
+          <li>
+            <input class="filter" data-filter=".check3" type="checkbox" id="checkbox3">
+            <label class="checkbox-label" for="checkbox3">May</label>
+          </li>
+          <li>
+            <input class="filter" data-filter=".check3" type="checkbox" id="checkbox3">
+            <label class="checkbox-label" for="checkbox3">June</label>
+          </li>
+          <li>
+            <input class="filter" data-filter=".check3" type="checkbox" id="checkbox3">
+            <label class="checkbox-label" for="checkbox3">July</label>
+          </li>
+          <li>
+            <input class="filter" data-filter=".check3" type="checkbox" id="checkbox3">
+            <label class="checkbox-label" for="checkbox3">August</label>
+          </li>
+          <li>
+            <input class="filter" data-filter=".check3" type="checkbox" id="checkbox3">
+            <label class="checkbox-label" for="checkbox3">September</label>
+          </li>
+          <li>
+            <input class="filter" data-filter=".check3" type="checkbox" id="checkbox3">
+            <label class="checkbox-label" for="checkbox3">October</label>
+          </li>
+          <li>
+            <input class="filter" data-filter=".check3" type="checkbox" id="checkbox3">
+            <label class="checkbox-label" for="checkbox3">November</label>
+          </li>
+          <li>
+            <input class="filter" data-filter=".check3" type="checkbox" id="checkbox3">
+            <label class="checkbox-label" for="checkbox3">December</label>
+          </li>
+        </ul> <!-- cd-filter-content -->
+      </div> <!-- cd-filter-block -->
+
+      <div class="cd-filter-block">
+        <h4><label for="sorted_by">Sorted by</label></h4>
+        <div class="cd-filter-content">
+          <div class="cd-filters">
+            <%= f.select(:sorted_by, @filterrific.select_options[:sorted_by], class: 'filter') %>
+          </div> <!-- cd-select -->
+        </div> <!-- cd-filter-content -->
+      </div> <!-- cd-filter-block -->
+      <div class="cd-filter-block">
+        <h4><label for="with_category_id" class="control-label">Filtered by</label></h4>
+        <div class="cd-filter-content">
+          <div class="cd-filters">
+            <%= f.select(
+                    :with_category_id,
+                    @filterrific.select_options[:with_category_id],
+                    include_blank: 'All') %>
+          </div>
+        </div>
+      </div>
+
+      <div class="cd-filter-block hidden">
+        <h4>Radio buttons</h4>
+
+        <ul class="cd-filter-content cd-filters list">
+          <li>
+            <input class="filter" data-filter="" type="radio" name="radioButton" id="radio1" checked>
+            <label class="radio-label" for="radio1">All</label>
+          </li>
+
+          <li>
+            <input class="filter" data-filter=".radio2" type="radio" name="radioButton" id="radio2">
+            <label class="radio-label" for="radio2">Choice 2</label>
+          </li>
+
+          <li>
+            <input class="filter" data-filter=".radio3" type="radio" name="radioButton" id="radio3">
+            <label class="radio-label" for="radio3">Choice 3</label>
+          </li>
+        </ul> <!-- cd-filter-content -->
+      </div> <!-- cd-filter-block -->
+      <%= render_filterrific_spinner %>
+  <% end %>
+  <a href="#0" class="cd-close">Close</a>
+</div> <!-- cd-filter -->
+
+<a href="#0" class="cd-filter-trigger">Filters</a>
+
+

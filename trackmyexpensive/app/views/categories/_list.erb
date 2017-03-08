@@ -1,0 +1,22 @@
+<% @categories.each do |category| %>
+    <div class="col-lg-3 col-md-3 col-sm-4">
+      <div class="card">
+        <div class="container">
+          <h4><b><%= category.name %></b></h4>
+          <p>Subcategories</p>
+          <div class="subcategories-list">
+            <% category.Subcategory.each do |subcategory| %>
+                <div class="subcategories-item"><%= subcategory.Name %>
+                  <span class="subcategory-command">
+                      <a href="#" class="text-success" data-id="<%= subcategory.id %>"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                    </span>
+                  <span class="subcategory-command ">
+                      <a href="#" class="text-danger js-delete-subcategory" data-message="Are you sure to delete this: <%= subcategory.Name %>" data-id="<%= subcategory.id %>"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                    </span>
+                </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+<% end %>
