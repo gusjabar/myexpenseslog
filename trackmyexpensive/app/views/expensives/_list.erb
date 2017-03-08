@@ -15,7 +15,7 @@
     <% @expensives.each do |expensive| %>
         <tr>
           <td><%= number_to_currency(expensive.amount) %></td>
-          <td><%= expensive.logdate.strftime("%m-%d-%Y") %></td>
+          <td><%= expensive.logdate.try(:strftime, '%m-%d-%Y') %></td>
           <td><%= expensive.note %></td>
           <td><%= expensive.category %></td>
           <td><%= expensive.subcategory %></td>

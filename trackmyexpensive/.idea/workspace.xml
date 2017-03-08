@@ -13,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/trackmyexpensive@Development__trackmyexpensive.coverage" NAME="Development: trackmyexpensive Coverage Results" MODIFIED="1488729936923" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="trackmyexpensive" />
+    <SUITE FILE_PATH="coverage/trackmyexpensive@Development__trackmyexpensive.coverage" NAME="Development: trackmyexpensive Coverage Results" MODIFIED="1488946836444" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="trackmyexpensive" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -55,7 +55,18 @@
     <favorites_list name="trackmyexpensive" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="_list.erb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/expensives/_list.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="40" lean-forward="true" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -149,7 +160,6 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b55c9c35-acbe-4b03-a8d9-502e4adbafd4/console.sql" />
         <option value="$PROJECT_DIR$/db/migrate/20170111021102_alter_column_expensives_logdate.rb" />
         <option value="$PROJECT_DIR$/tmp/pids/server.pid" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/views/expensives/index.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/variables.scss" />
@@ -161,11 +171,12 @@
         <option value="$PROJECT_DIR$/public/assets/application-b063b77816f9207fde1a31f7a44ff056273b2eef67b3bb9d90eed4fb691cb3c3.js" />
         <option value="$PROJECT_DIR$/public/assets/application-e7a5f0b773d965c4b68b04a9edbed9727dac4866e86dead88b5f418f41ef08c1.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/app/controllers/expensiveIndexController.coffee" />
-        <option value="$PROJECT_DIR$/app/views/expensives/_list.erb" />
         <option value="$PROJECT_DIR$/app/controllers/expensives_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/expensive.rb" />
         <option value="$PROJECT_DIR$/app/views/application/_menu.html.erb" />
         <option value="$APPLICATION_CONFIG_DIR$/rubymine.vmoptions" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/app/views/expensives/_list.erb" />
       </list>
     </option>
   </component>
@@ -191,7 +202,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1680" />
-    <option name="height" value="957" />
+    <option name="height" value="962" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -212,7 +223,7 @@
     </navigator>
     <panes>
       <pane id="RailsProjectView" />
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -241,14 +252,14 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQL" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/controllers/expensives_controller.rb&#10;expen&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/controllers/expensives_controller.rb&#10;expe&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/models/expensive.rb&#10;lis&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/views/expensives/_list.erb&#10;exp&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/controllers/expensives_controller.rb&#10;expensi&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/models/expensive.rb&#10;filter&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/views/expensives/_filter.html.erb&#10;f&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/views/expensives/_form.html.erb&#10;ind&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/assets/javascripts/app/controllers/expensiveIndexController.coffee&#10;for&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/views/expensives/_form.html.erb&#10;fil&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/views/expensives/_filter.html.erb&#10;app&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/assets/stylesheets/application.scss&#10;index&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/assets/javascripts/app/controllers/expensiveIndexController.coffee&#10;in&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/views/expensives/index.html.erb&#10;fo&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/views/expensives/_form.html.erb&#10;a&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/assets/stylesheets/application.scss&#10;ge&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/Gemfile&#10;applic&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/assets/stylesheets/application.scss&#10;gem&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/Gemfile&#10;_form&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/views/expensives/_form.html.erb&#10;pid&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/tmp/pids/server.pid&#10;list&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/views/expensives/_list.erb&#10;alter&#9;null&#9;null&#10;_fil&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/views/expensives/_filter.html.erb&#10;_f&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/views/expensives/_filter.html.erb&#10;fi&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/assets/stylesheets/filter-custom.scss&#10;_fi&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/views/expensives/_filter.html.erb&#10;inde&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/views/expensives/index.html.erb&#10;ap&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/assets/stylesheets/application.scss&#10;var&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/assets/stylesheets/variables.scss&#10;sty&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/vendor/bundle/ruby/2.3.0/gems/bootstrap-sass-3.3.7/templates/project/styles.sass&#10;filte&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/views/expensives/_filter.html.erb&#10;styles&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/vendor/bundle/ruby/2.3.0/gems/bootstrap-sass-3.3.7/templates/project/styles.sass&#10;expensive&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/assets/stylesheets/expensives.scss&#10;expens&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/models/expensive.rb&#10;cate&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/models/category.rb&#10;ex&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/views/expensives/index.html.erb&#10;_lis&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/views/expensives/_list.erb&#10;appli&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/assets/javascripts/application.js&#10;asset&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/config/initializers/assets.rb&#10;expensivecon&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/controllers/expensives_controller.rb&#10;categories_&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/controllers/categories_controller.rb&#10;category&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/test/controllers/category_controller_test.rb&#10;expensiv&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/controllers/expensives_controller.rb&#10;kami&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/config/initializers/kaminari_config.rb&#10;vari&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/assets/stylesheets/variables.scss&#10;sub&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/controllers/subcategories_controller.rb&#10;form&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/views/subcategories/_form.html.erb&#10;new&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/views/categories/new.html.erb&#10;categories&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/assets/javascripts/app/controllers/categoriesIndexController.coffee" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/javier/projects/lazyexpense/trackmyexpensive/app/views/expensives/_list.erb&#10;_list&#9;FILE&#9;file:///Users/javier/projects/lazyexpense/trackmyexpensive/app/views/expensives/_list.erb&#10;expen&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/controllers/expensives_controller.rb&#10;expe&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/models/expensive.rb&#10;lis&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/views/expensives/_list.erb&#10;exp&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/controllers/expensives_controller.rb&#10;expensi&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/models/expensive.rb&#10;filter&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/views/expensives/_filter.html.erb&#10;f&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/views/expensives/_form.html.erb&#10;ind&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/assets/javascripts/app/controllers/expensiveIndexController.coffee&#10;for&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/views/expensives/_form.html.erb&#10;fil&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/views/expensives/_filter.html.erb&#10;app&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/assets/stylesheets/application.scss&#10;index&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/assets/javascripts/app/controllers/expensiveIndexController.coffee&#10;in&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/views/expensives/index.html.erb&#10;fo&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/views/expensives/_form.html.erb&#10;a&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/assets/stylesheets/application.scss&#10;ge&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/Gemfile&#10;applic&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/assets/stylesheets/application.scss&#10;gem&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/Gemfile&#10;_form&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/views/expensives/_form.html.erb&#10;pid&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/tmp/pids/server.pid&#10;list&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/views/expensives/_list.erb&#10;alter&#9;null&#9;null&#10;_fil&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/views/expensives/_filter.html.erb&#10;_f&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/views/expensives/_filter.html.erb&#10;fi&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/assets/stylesheets/filter-custom.scss&#10;_fi&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/views/expensives/_filter.html.erb&#10;inde&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/views/expensives/index.html.erb&#10;ap&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/assets/stylesheets/application.scss&#10;var&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/assets/stylesheets/variables.scss&#10;sty&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/vendor/bundle/ruby/2.3.0/gems/bootstrap-sass-3.3.7/templates/project/styles.sass&#10;filte&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/views/expensives/_filter.html.erb&#10;styles&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/vendor/bundle/ruby/2.3.0/gems/bootstrap-sass-3.3.7/templates/project/styles.sass&#10;expensive&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/assets/stylesheets/expensives.scss&#10;expens&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/models/expensive.rb&#10;cate&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/models/category.rb&#10;ex&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/views/expensives/index.html.erb&#10;_lis&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/views/expensives/_list.erb&#10;appli&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/assets/javascripts/application.js&#10;asset&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/config/initializers/assets.rb&#10;expensivecon&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/controllers/expensives_controller.rb&#10;categories_&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/controllers/categories_controller.rb&#10;category&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/test/controllers/category_controller_test.rb&#10;expensiv&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/controllers/expensives_controller.rb&#10;kami&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/config/initializers/kaminari_config.rb&#10;vari&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/assets/stylesheets/variables.scss&#10;sub&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/controllers/subcategories_controller.rb&#10;form&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/views/subcategories/_form.html.erb&#10;new&#9;FILE&#9;file:///home/gustavo/projects/lazyexpense/trackmyexpensive/app/views/categories/new.html.erb" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -510,7 +521,8 @@
       <workItem from="1488689001448" duration="2369000" />
       <workItem from="1488729842652" duration="1262000" />
       <workItem from="1488930684619" duration="1899000" />
-      <workItem from="1488933768779" duration="1767000" />
+      <workItem from="1488933768779" duration="3982000" />
+      <workItem from="1488946698137" duration="145000" />
     </task>
     <task id="LOCAL-00001" summary="first version">
       <created>1480787237676</created>
@@ -579,7 +591,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="252899000" />
+    <option name="totallyTimeSpent" value="255259000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -591,17 +603,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="957" extended-state="6" />
+    <frame x="0" y="23" width="1680" height="962" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16178267" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16361417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2665148" sideWeight="0.4978678" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3259861" sideWeight="0.42307693" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20695971" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3259861" sideWeight="0.5769231" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32348993" sideWeight="0.49543795" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3259861" sideWeight="0.5769231" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3217993" sideWeight="0.49543795" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5261745" sideWeight="0.6393617" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.52479815" sideWeight="0.6393617" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.52050114" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -769,13 +781,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tmp/pids/server.pid" />
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="52" column="11" lean-forward="false" selection-start-line="52" selection-start-column="11" selection-end-line="52" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -930,13 +935,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/expensives/_list.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="54" lean-forward="false" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/expensives/index.json.jbuilder">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1031,26 +1029,42 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/bd741af2/b55c9c35-acbe-4b03-a8d9-502e4adbafd4/trackmyexpensive_development.public.expensives">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/bd741af2/b55c9c35-acbe-4b03-a8d9-502e4adbafd4/trackmyexpensive_development.public.categories">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/expensives/_list.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="40" lean-forward="true" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>

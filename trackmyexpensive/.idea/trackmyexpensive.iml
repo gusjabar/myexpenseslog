@@ -203,6 +203,20 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
+      <library name="addressable (vbundled(2.5.0)) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/addressable-2.5.0/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/addressable-2.5.0/data" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/addressable-2.5.0/tasks" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/addressable-2.5.0/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/addressable-2.5.0/data" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/addressable-2.5.0/tasks" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
       <library name="arel (vbundled(7.1.4)) [path][gem]">
         <CLASSES>
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/arel-7.1.4/lib" />
@@ -347,6 +361,20 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
+      <library name="domain_name (vbundled(0.5.20170223)) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/domain_name-0.5.20170223/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/domain_name-0.5.20170223/data" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/domain_name-0.5.20170223/tool" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/domain_name-0.5.20170223/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/domain_name-0.5.20170223/data" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/domain_name-0.5.20170223/tool" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
       <library name="erubis (vbundled(2.7.0)) [path][gem]">
         <CLASSES>
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/erubis-2.7.0/bin" />
@@ -361,6 +389,22 @@
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/erubis-2.7.0/contrib" />
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/erubis-2.7.0/doc-api" />
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/erubis-2.7.0/benchmark" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="excon (vbundled(0.55.0)) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/excon-0.55.0/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/excon-0.55.0/data" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/excon-0.55.0/tests" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/excon-0.55.0/benchmarks" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/excon-0.55.0/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/excon-0.55.0/data" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/excon-0.55.0/tests" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/excon-0.55.0/benchmarks" />
         </SOURCES>
       </library>
     </orderEntry>
@@ -423,6 +467,40 @@
         </CLASSES>
         <SOURCES>
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/globalid-0.3.7/lib" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="heroku (vbundled(3.41.5)) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/heroku-3.41.5/bin" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/heroku-3.41.5/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/heroku-3.41.5/data" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/heroku-3.41.5/bin" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/heroku-3.41.5/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/heroku-3.41.5/data" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="heroku-api (vbundled(0.4.2)) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/heroku-api-0.4.2/lib" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/heroku-api-0.4.2/lib" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="http-cookie (vbundled(1.0.3)) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/http-cookie-1.0.3/lib" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/http-cookie-1.0.3/lib" />
         </SOURCES>
       </library>
     </orderEntry>
@@ -523,6 +601,20 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
+      <library name="launchy (vbundled(2.4.3)) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/launchy-2.4.3/bin" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/launchy-2.4.3/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/launchy-2.4.3/tasks" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/launchy-2.4.3/bin" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/launchy-2.4.3/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/launchy-2.4.3/tasks" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
       <library name="listen (vbundled(3.0.8)) [path][gem]">
         <CLASSES>
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/listen-3.0.8/bin" />
@@ -619,6 +711,40 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
+      <library name="net-ssh (vbundled(4.1.0)) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/net-ssh-4.1.0/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/net-ssh-4.1.0/support" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/net-ssh-4.1.0/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/net-ssh-4.1.0/support" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="net-ssh-gateway (vbundled(2.0.0)) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/net-ssh-gateway-2.0.0/lib" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/net-ssh-gateway-2.0.0/lib" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="netrc (vbundled(0.11.0)) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/netrc-0.11.0/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/netrc-0.11.0/data" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/netrc-0.11.0/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/netrc-0.11.0/data" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
       <library name="nio4r (vbundled(2.0.0)) [path][gem]">
         <CLASSES>
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/nio4r-2.0.0/ext" />
@@ -663,6 +789,18 @@
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/pg-0.19.0/ext" />
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/pg-0.19.0/lib" />
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/pg-0.19.0/sample" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="public_suffix (vbundled(2.0.5)) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/public_suffix-2.0.5/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/public_suffix-2.0.5/data" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/public_suffix-2.0.5/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/public_suffix-2.0.5/data" />
         </SOURCES>
       </library>
     </orderEntry>
@@ -789,6 +927,30 @@
         </CLASSES>
         <SOURCES>
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/rb-inotify-0.9.8/lib" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="rest-client (vbundled(2.0.1)) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/rest-client-2.0.1/bin" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/rest-client-2.0.1/lib" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/rest-client-2.0.1/bin" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/rest-client-2.0.1/lib" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="rubyzip (vbundled(1.2.1)) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/rubyzip-1.2.1/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/rubyzip-1.2.1/samples" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/rubyzip-1.2.1/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/rubyzip-1.2.1/samples" />
         </SOURCES>
       </library>
     </orderEntry>
@@ -955,6 +1117,28 @@
         </CLASSES>
         <SOURCES>
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/uglifier-3.1.3/lib" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="unf (vbundled(0.1.4)) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/unf-0.1.4/lib" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/unf-0.1.4/lib" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="unf_ext (vbundled(0.0.7.2)) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/unf_ext-0.0.7.2/ext" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/unf_ext-0.0.7.2/lib" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/unf_ext-0.0.7.2/ext" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/unf_ext-0.0.7.2/lib" />
         </SOURCES>
       </library>
     </orderEntry>

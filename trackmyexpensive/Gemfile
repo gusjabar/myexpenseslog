@@ -58,3 +58,5 @@ gem 'filterrific'
 gem 'bourbon'
 #Jquery UI https://github.com/jquery-ui-rails/jquery-ui-rails
 gem 'jquery-ui-rails'
+
+gem 'heroku'
