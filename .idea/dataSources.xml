@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="Rails trackmyexpensive: production" uuid="a6d09900-5bff-4d03-adf6-e3effae007ba">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:trackmyexpensive_production</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails trackmyexpensive: test" uuid="c288b8c2-7eac-4b90-8e82-8dd8a19889ec">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:trackmyexpensive_test</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails trackmyexpensive: development" uuid="12801c22-297a-4fb6-8aa7-e540442f274b">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:trackmyexpensive_development</jdbc-url>
+    </data-source>
+  </component>
+</project>

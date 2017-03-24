@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails trackmyexpensive: production" uuid="a6d09900-5bff-4d03-adf6-e3effae007ba">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <user-name>trackmyexpensive</user-name>
+    </data-source>
+    <data-source name="Rails trackmyexpensive: test" uuid="c288b8c2-7eac-4b90-8e82-8dd8a19889ec">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+    </data-source>
+    <data-source name="Rails trackmyexpensive: development" uuid="12801c22-297a-4fb6-8aa7-e540442f274b">
+      <database-info product="PostgreSQL" version="9.6.2" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <user-name>db_developer</user-name>
+      <introspection-schemas>trackmyexpensive_development:public</introspection-schemas>
+    </data-source>
+  </component>
+</project>
