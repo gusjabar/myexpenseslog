@@ -1,0 +1,24 @@
+I"(function() {
+  var ExpensiveServices;
+
+  ExpensiveServices = (function() {
+    var createNewExpensive, loadSubcategories;
+    console.log("Load Services");
+    createNewExpensive = function(doneCreateNewExpensive, failCreateNewExpensive) {
+      return $.get("/Expensives/new").done(doneCreateNewExpensive).fail(failCreateNewExpensive);
+    };
+    loadSubcategories = function(categoryId, doneLoadSubcategories, failLoadSubcategories) {
+      console.log("load data");
+      return $.ajax({
+        url: "/api/catalog/getSubcategories/" + categoryId,
+        dataType: "html"
+      }).done(doneLoadSubcategories).fail(failLoadSubcategories);
+    };
+    return {
+      createNewExpensive: createNewExpensive,
+      loadSubcategories: loadSubcategories
+    };
+  })();
+
+}).call(this);
+:ET

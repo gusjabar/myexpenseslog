@@ -1,0 +1,14 @@
+I"°(function() {
+  window.CategoriesServices = (function() {
+    var deleteSubcategory;
+    console.log("Load Categories Services");
+    deleteSubcategory = function(subcategoryId, doneDeleteSubcategory, failDeleteSubcategory) {
+      $.post("/subcategories/destroy" + subcategoryId).done(doneDeleteSubcategory).fail(failDeleteSubcategory);
+    };
+    return {
+      deleteSubcategory: deleteSubcategory
+    };
+  })();
+
+}).call(this);
+:ET

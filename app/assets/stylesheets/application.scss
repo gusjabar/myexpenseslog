@@ -1,0 +1,171 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "jquery-ui/core";
+@import "jquery-ui/theme";
+@import "jquery-ui/datepicker";
+@import "font-awesome";
+@import "select2";
+@import "select2-bootstrap";
+@import "bourbon";
+@import "category";
+@import "variables";
+@import "expensives";
+@import "filter-custom";
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+// SASS style sheet */
+// Palette color codes */
+// Palette URL: http://paletton.com/#uid=12E0u0kcglL4Zvw8Eq6eXhmkwen */
+
+// Feel free to copy&paste color codes to your application */
+
+// As hex codes */
+
+body {
+  background-color: $color-primary-6;
+  color: $color-primary-7;
+  font: {
+    size: 1.6rem;
+    family: $primary-font; // variables inside partials > _variables.scss
+  }
+}
+
+ol, ul {
+  list-style: none;
+}
+
+.bootbox-body {
+  margin: 0 10px;
+}
+
+.navbar-default {
+  background-color: $color-primary-0;
+  color: $color-primary-0;
+  .navbar-brand {
+    color: $color-primary-1;
+    &:hover {
+      color: $color-primary-6;
+    }
+    &:focus {
+      color: $color-primary-6;
+    }
+  }
+  .navbar-nav {
+    > li {
+      > a {
+        &:hover {
+          color: $color-primary-6;
+        }
+        &:focus {
+          color: $color-primary-6;
+        }
+        color: $color-primary-5;
+      }
+    }
+    > .open {
+      > a {
+        background-color: $color-primary-4;
+        color: $color-primary-6;
+        &:hover {
+          background-color: $color-primary-4;
+          color: $color-primary-6;
+        }
+        &:focus {
+          background-color: $color-primary-4;
+          color: $color-primary-6;
+        }
+      }
+    }
+  }
+  .navbar-toggle {
+    &:hover {
+      background-color: $color-primary-5;
+    }
+    &:focus {
+      background-color: $color-primary-5;
+    }
+    .icon-bar {
+      background-color: $color-primary-1;
+    }
+  }
+;
+}
+
+.navbar-nav {
+  > li {
+    > .dropdown-menu {
+      background-color: $color-primary-3;
+    }
+  }
+}
+
+.dropdown-menu {
+  > li {
+    > a {
+      color: $color-primary-6;
+      &:hover {
+        background-color: $color-primary-2;
+        color: $color-primary-6;
+      }
+      &:focus {
+        background-color: $color-primary-2;
+        color: $color-primary-6;
+      }
+    }
+  }
+}
+
+.has-error .calendar-pickup{
+  &::after {
+    top: 25%;
+  }
+}
+.calendar-pickup {
+  /* select element wrapper */
+  position: relative;
+  &::after {
+    /* switcher arrow for select element */
+    content: '';
+    position: absolute;
+    z-index: 1;
+    left: 12px;
+    top: 50%;
+    @include transform(translateY(-50%));
+
+    display: block;
+    width: 24px;
+    height: 24px;
+
+    background: $url_date no-repeat center center;
+    pointer-events: none;
+  }
+  input[type="text"]{
+    padding: 6px 40px;
+  }
+  input[type="date"]{
+    padding: 6px 40px;
+  }
+}
+
+/*.filter-search {
+  position: static;
+  display: inline-block;
+  padding-bottom: 25px;
+.wrapper {
+  position: absolute;
+  display: inline-block;
+  /*width: 81%;
+  .fa-search {
+    color: #666;
+    top: 10px;
+    left: 5px;
+    position: absolute;
+  }
+  input[type='text'] {
+    padding-left: 20px;
+  }
+}
+}*/
+
+
+

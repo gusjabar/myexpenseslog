@@ -1,0 +1,17 @@
+<h1>Listing Categories</h1>
+<hr>
+<button class="btn btn-primary" id="btnAddNewSubcategory"><i class="fa fa-plus" aria-hidden="true"></i> New Subcategory</button><br>
+<br>
+<div class="row">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <%= render(
+              partial: 'categories/list',
+              locals: {categories: @categories}
+          ) %>
+    </div>
+  </div>
+</div>
+<div id="SubcategoryModal">
+
+</div>

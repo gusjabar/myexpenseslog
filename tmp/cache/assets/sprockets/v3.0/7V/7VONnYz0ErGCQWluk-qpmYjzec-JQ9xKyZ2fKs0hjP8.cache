@@ -1,0 +1,73 @@
+I"q	(function() {
+  window.CategoriesIndexController = (function(categoriesServices) {
+    var Init, doneDeleteSubcategory, doneNewSubcategoriesModal, failDeleteSubcategory, failNewSubcategories, onClick_DeleteSubcategory, onDelete_Subcategory, showNewSubcategory;
+    Init = function() {
+      console.log("OnInit_CategoriesIndexController ");
+      $(document).on("click", ".js-delete-subcategory", onClick_DeleteSubcategory);
+      $(document).on("click", "#btnAddNewSubcategory", showNewSubcategory);
+    };
+    onClick_DeleteSubcategory = function(e) {
+      var confirm, subCategoryId;
+      e.preventDefault();
+      subCategoryId = $(this).attr("data-id");
+      confirm = $(this).attr("data-message");
+      return bootbox.confirm({
+        message: confirm,
+        buttons: {
+          confirm: {
+            label: 'Yes',
+            className: 'btn-success'
+          },
+          cancel: {
+            label: 'No',
+            className: 'btn-danger'
+          }
+        },
+        callback: function(result) {
+          if (result) {
+            onDelete_Subcategory(subCategoryId);
+            console.log('onClick DeleteSubcategory was logged in the callback: ' + result);
+          }
+        }
+      });
+    };
+    onDelete_Subcategory = function(id) {
+      console.log("Call services: " + id);
+      return categoriesServices.deleteSubcategory(id, doneDeleteSubcategory, failDeleteSubcategory);
+    };
+    doneDeleteSubcategory = function(data) {
+      console.log("done: " + data);
+    };
+    failDeleteSubcategory = function(err) {
+      console.log("fail: " + err);
+    };
+    showNewSubcategory = function() {
+      console.log("btn click");
+      categoriesServices.createNewSubcategory(doneNewSubcategoriesModal, failNewSubcategories);
+    };
+    doneNewSubcategoriesModal = function(html) {
+      var dialog;
+      dialog = bootbox.dialog({
+        title: "New Subcategory",
+        message: html,
+        closeButton: true
+      });
+      dialog.init(function() {
+        $(".bootbox").removeAttr("tabindex");
+        $('select').select2({
+          theme: 'bootstrap'
+        });
+        $("span.select2.select2-container").removeAttr("style");
+        return $(".select2 .select2-container").css("width", "100%");
+      });
+    };
+    failNewSubcategories = function(err) {
+      console.log(err);
+    };
+    return {
+      init: Init
+    };
+  })(window.CategoriesServices);
+
+}).call(this);
+:ET

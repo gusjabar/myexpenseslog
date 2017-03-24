@@ -1,0 +1,21 @@
+I"%(function() {
+  window.CategoriesServices = (function() {
+    var deleteSubcategory;
+    console.log("Load Categories Services");
+    deleteSubcategory = function(subcategoryId, doneDeleteSubcategory, failDeleteSubcategory) {
+      $.ajax({
+        method: 'POST',
+        url: '/subcategories/destroy',
+        data: {
+          '_method': 'delete',
+          id: subcategoryId
+        }
+      }).done(doneDeleteSubcategory).fail(failDeleteSubcategory);
+    };
+    return {
+      deleteSubcategory: deleteSubcategory
+    };
+  })();
+
+}).call(this);
+:ET

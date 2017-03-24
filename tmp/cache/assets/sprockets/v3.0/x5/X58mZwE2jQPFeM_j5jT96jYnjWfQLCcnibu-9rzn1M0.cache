@@ -1,0 +1,30 @@
+I"}(function() {
+  window.ExpensiveServices = (function() {
+    var createNewExpensive, doneCreateNewExpensiveModal, failCreateNewExpensiveModal, loadSubcategories;
+    console.log("Load Services");
+    createNewExpensive = function(doneCreateNewExpensiveModal, failCreateNewExpensiveModal) {
+      $.get("/expensives/new").done(doneCreateNewExpensiveModal).fail(failCreateNewExpensiveModal);
+    };
+    loadSubcategories = function(categoryId, doneLoadSubcategories, failLoadSubcategories) {
+      console.log("load data");
+      $.ajax({
+        url: "/api/catalog/getSubcategories/" + categoryId,
+        dataType: "html"
+      }).done(doneLoadSubcategories).fail(failLoadSubcategories);
+    };
+    failCreateNewExpensiveModal = function() {
+      console.log("Fail to create a new expense");
+    };
+    doneCreateNewExpensiveModal = function() {
+      return console.log("Done");
+    };
+    return {
+      createNewExpensive: createNewExpensive,
+      failCreateNewExpensiveModal: failCreateNewExpensiveModal,
+      loadSubcategories: loadSubcategories,
+      doneCreateNewExpensiveModal: doneCreateNewExpensiveModal
+    };
+  })();
+
+}).call(this);
+:ET

@@ -1,0 +1,453 @@
+/*
+@import 'bourbon'; // http://bourbon.io/
+
+@import '../partials/variables'; // colors, fonts etc...
+
+@import '../partials/mixins'; // custom mixins
+
+@import '../partials/layout'; // responsive grid and media queries
+*/
+
+$S: 480px;
+$M: 768px;
+$L: 1170px;
+
+// media queries
+
+@mixin MQ($canvas) {
+  @if $canvas == S {
+    @media only screen and (min-width: $S) {
+      @content;
+    }
+  } @else if $canvas == M {
+    @media only screen and (min-width: $M) {
+      @content;
+    }
+  } @else if $canvas == L {
+    @media only screen and (min-width: $L) {
+      @content;
+    }
+  }
+}
+
+//Local varialbes
+$filter-height: 50px;
+$color_minsk_approx: #41307c;
+$color_mercury_approx: #e6e6e6;
+$white: #ffffff;
+
+//urls
+$url_0: image-url('cd-icon-filter.svg');
+$url_1: image-url('cd-icon-arrow.svg');
+$url_2: image-url('ic_search_black_24px.svg');
+$url_3: image-url('cd-icon-check.svg');
+/* --------------------------------
+
+Primary style
+
+-------------------------------- */
+
+*, *::after, *::before {
+  @include box-sizing(border-box);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font: {
+    size: 1.6rem;
+    family: $primary-font;
+  }
+  color: $color-1;
+  background-color: lighten($color-4, 30%);
+}
+
+a {
+  color: $color-2;
+  text-decoration: none;
+}
+
+/* --------------------------------
+
+xfilter
+
+-------------------------------- */
+
+.cd-filter {
+  position: absolute;
+  top: 51px;
+  left: 0;
+  width: 280px;
+  background: $color-3;
+  box-shadow: 4px 4px 20px rgba(#000, 0);
+  z-index: 3;
+  @include transform(translateZ(0));
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  @include transform(translateX(-100%));
+  @include transition(transform .3s, box-shadow .3s);
+  &::before {
+    /* top colored bar */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: $filter-height;
+    width: 100%;
+    background-color: $color-2;
+    z-index: 2;
+  }
+
+  form {
+    padding: $filter-height+20px 20px;
+  }
+
+  .cd-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: $filter-height;
+    line-height: $filter-height;
+    width: 60px;
+    color: $color-3;
+    font-size: 1.3rem;
+    text-align: center;
+
+    background: darken($color-2, 5%);
+    opacity: 0;
+
+    @include transition(opacity .3s);
+    z-index: 3;
+
+    .no-touch &:hover {
+      background: darken($color-2, 8%);
+    }
+  }
+
+  &.filter-is-visible {
+    @include transform(translateX(0));
+    box-shadow: 4px 4px 20px rgba(#000, .2);
+
+    .cd-close {
+      opacity: 1;
+    }
+  }
+
+  @include MQ(L) {
+    width: 20%;
+    form {
+      padding: $filter-height+20px 10%;
+    }
+  }
+}
+
+.cd-filter-trigger {
+  position: absolute;
+  top: 51px;
+  left: 0;
+  height: $filter-height;
+  line-height: $filter-height;
+  width: 60px;
+
+  /* image replacement */
+  overflow: hidden;
+  text-indent: 100%;
+  color: transparent;
+  white-space: nowrap;
+  background: transparent $url_0 no-repeat center center;
+
+  z-index: 3;
+
+  &.filter-is-visible {
+    pointer-events: none;
+  }
+
+  @include MQ(L) {
+    width: auto;
+    left: 2%;
+
+    text-indent: 0;
+    color: $color-4;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 700;
+
+    padding-left: 24px;
+    background-position: left center;
+
+    @include transition(color .3s);
+
+    .no-touch &:hover {
+      color: $color-2;
+    }
+
+    &.filter-is-visible,
+    &.filter-is-visible:hover {
+      color: $color-3;
+    }
+  }
+}
+
+/* --------------------------------
+
+xcustom form elements
+
+-------------------------------- */
+
+.cd-filter-block {
+  margin-bottom: 1.6em;
+
+  h4 {
+    /* filter block title */
+    position: relative;
+    margin-bottom: .2em;
+    padding: 10px 0 10px 20px;
+
+    color: $color-4;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.3rem;
+
+    @include user-select(none);
+    cursor: pointer;
+
+    .no-touch &:hover {
+      color: $color-2;
+    }
+
+    &::before {
+      /* arrow */
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 16px;
+      height: 16px;
+      background: $url_1 no-repeat center center;
+
+      @include transform(translateY(-50%));
+      @include transition(transform .3s);
+    }
+
+    &.closed::before {
+      @include transform(translateY(-50%) rotate(-90deg));
+    }
+  }
+
+  input, select,
+  .radio-label::before,
+  .checkbox-label::before {
+    /* shared style for input elements */
+    font-family: $primary-font;
+    border-radius: 0;
+    background-color: $color-3;
+    border: 2px solid darken($color-3, 10%);
+  }
+
+  input[type='search'],
+  input[type='text'],
+  select {
+    width: 100%;
+    padding: .8em;
+    @include appearance(none);
+    box-shadow: none;
+
+    &:focus {
+      outline: none;
+      background-color: $color-3;
+      border-color: $color-2;
+    }
+  }
+
+  input[type='search'] {
+    /* custom style for the search element */
+    border-color: transparent;
+    background-color: darken($color-3, 10%);
+    /* prevent jump - ios devices */
+    font-size: 1.6rem !important;
+  }
+
+  input[type='search']::-webkit-search-cancel-button {
+    display: none;
+  }
+
+  .cd-select {
+    /* select element wrapper */
+    position: relative;
+  }
+
+  .cd-select::after {
+    /* switcher arrow for select element */
+    content: '';
+    position: absolute;
+    z-index: 1;
+    right: 14px;
+    top: 50%;
+    @include transform(translateY(-50%));
+
+    display: block;
+    width: 16px;
+    height: 16px;
+
+    background: $url_1 no-repeat center center;
+    pointer-events: none;
+  }
+
+  select {
+    cursor: pointer;
+    font-size: 1.4rem;
+  }
+
+  select::-ms-expand {
+    display: none;
+  }
+
+  .list li {
+    position: relative;
+    margin-bottom: .8em;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  input[type=radio],
+  input[type=checkbox] {
+    /* hide original check and radio buttons */
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    z-index: 2;
+  }
+
+  .checkbox-label,
+  .radio-label {
+    padding-left: 24px;
+    font-size: 1.4rem;
+    @include user-select(none);
+
+    &::before,
+    &::after {
+      /* custom radio and check boxes */
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      @include transform(translateY(-50%));
+    }
+
+    &::before {
+      width: 16px;
+      height: 16px;
+      left: 0;
+    }
+
+    &::after {
+      /* check mark - hidden */
+      display: none;
+    }
+  }
+
+  .checkbox-label::after {
+    /* check mark style for check boxes */
+    width: 16px;
+    height: 16px;
+    left: 0px;
+    background: $url_3 no-repeat center center;
+  }
+
+  .radio-label::before,
+  .radio-label::after {
+    border-radius: 50%;
+  }
+
+  .radio-label::after {
+    /* check mark style for radio buttons */
+    width: 6px;
+    height: 6px;
+    background-color: $color-3;
+    left: 5px;
+  }
+
+  input[type=radio]:checked + label::before,
+  input[type=checkbox]:checked + label::before {
+    border-color: $color-2;
+    background-color: $color-2;
+  }
+
+  input[type=radio]:checked + label::after,
+  input[type=checkbox]:checked + label::after {
+    display: block;
+  }
+}
+
+//search input type
+input[type='search'] {
+  width: 100%;
+  padding: .8em .8em .8em 1.8em !important;
+  appearance: none;
+  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: none;
+  border-color: transparent;
+  background-color: $color_mercury_approx;
+  font-size: 1.6rem !important;
+  &:focus {
+    outline: none;
+    background-color: $white;
+    border-color: $color_minsk_approx;
+  }
+}
+
+input[type='text'], textarea {
+  width: 100%;
+  /*padding: .8em .8em .8em 1.8em;*/
+  @include appearance(none);
+  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: none;
+  &:focus {
+    outline: none;
+    background-color: $white !important;
+    border-color: $color_minsk_approx !important;
+  }
+}
+
+input[type='search']::-webkit-search-cancel-button {
+  display: none;
+}
+
+.search-input {
+  position: relative;
+  padding-left: 0;
+}
+
+.search-input::after {
+  content: '';
+  position: absolute;
+  z-index: 3;
+  left: 5px;
+  top: 50%;
+  //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+  @include transform(translateY(-50%));
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: $url_2 no-repeat center center;
+  pointer-events: none;
+}
+
+@-moz-document url-prefix() {
+  /* hide custom arrow on Firefox - select element */
+  .cd-filter-block .cd-select::after {
+    display: none;
+  }
+}

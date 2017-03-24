@@ -1,0 +1,27 @@
+I"Ê(function() {
+  window.ExpensiveServices = (function() {
+    var createNewExpensive, failCreateNewExpensive, loadSubcategories;
+    console.log("Load Services");
+    createNewExpensive = function(doneLoadSubcategoriesModal, failCreateNewExpensive) {
+      $.get("/expensives/new").done(doneLoadSubcategoriesModal).fail(failCreateNewExpensive);
+    };
+    loadSubcategories = function(categoryId, doneLoadSubcategories, failLoadSubcategories) {
+      console.log("load data");
+      $.ajax({
+        url: "/api/catalog/getSubcategories/" + categoryId,
+        dataType: "html"
+      }).done(doneLoadSubcategories).fail(failLoadSubcategories);
+    };
+    failCreateNewExpensive = function(err) {
+      console.log("Fail to create a new expense");
+      return console.log(err);
+    };
+    return {
+      createNewExpensive: createNewExpensive,
+      loadSubcategories: loadSubcategories,
+      failCreateNewExpensive: failCreateNewExpensive
+    };
+  })();
+
+}).call(this);
+:ET

@@ -1,0 +1,22 @@
+I"Å(function() {
+  window.CategoriesIndexController = (function() {
+    var Init, onClick_DeleteSubcategory, onDelete_Subcategory;
+    Init = function() {
+      console.log("OnInit_CategoriesIndexController ");
+      $(".subcategory-command").on("click", ".js-delete-subcategory", onClick_DeleteSubcategory);
+    };
+    onClick_DeleteSubcategory = function() {
+      var result;
+      result = bootbox.confirm("Confirm delete?", onDelete_Subcategory);
+      return console.log(result);
+    };
+    onDelete_Subcategory = function() {
+      return console.log("Call services");
+    };
+    return {
+      init: Init
+    };
+  })();
+
+}).call(this);
+:ET
