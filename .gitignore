@@ -1,1 +1,4 @@
 Tmp
+vendor/bundle
+.bundle/config
+
