@@ -1,4 +1,4 @@
-window.ExpensiveServices =(() ->
+window.ExpensiveServices = (() ->
   console.log "Load Services"
   #private methods
   createNewExpensive = (doneCreateNewExpensiveModal, failCreateNewExpensiveModal) ->
@@ -20,13 +20,24 @@ window.ExpensiveServices =(() ->
     console.log "Fail to create a new expense"
     return
 
-  doneCreateNewExpensiveModal= () ->
+  doneCreateNewExpensiveModal = () ->
     console.log "Done"
+
+  deleteExpense = (expenseId, doneDeleteExpense, failDeleteExpense) ->
+    $.ajax(
+      method: 'DELETE'
+      url: '/expensives/' + expenseId
+    )
+      .done(doneDeleteExpense)
+      .fail(failDeleteExpense)
+    return
 
   #public methods
   return {
     createNewExpensive: createNewExpensive,
     failCreateNewExpensiveModal: failCreateNewExpensiveModal,
     loadSubcategories: loadSubcategories,
-    doneCreateNewExpensiveModal: doneCreateNewExpensiveModal
+    doneCreateNewExpensiveModal: doneCreateNewExpensiveModal,
+    deleteExpense: deleteExpense,
+
   })()

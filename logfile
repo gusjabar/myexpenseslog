@@ -7,3 +7,11 @@ FATAL:  role "gustavodb" does not exist
 FATAL:  role "gustavo_db" does not exist
 FATAL:  database "trackmyexpensive_test" does not exist
 FATAL:  role "trackmyexpensive" does not exist
+LOG:  autovacuum launcher shutting down
+LOG:  received smart shutdown request
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  database system was shut down at 2017-03-23 22:47:38 EDT
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started

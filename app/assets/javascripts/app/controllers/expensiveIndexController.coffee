@@ -7,9 +7,11 @@ window.ExpensiveIndexController = ((expensiveServices)->
     $(document).bind "ajaxError", "form#new_expensive", renderFormErrors
     $(document).on "click", "#btnAddNewExpensive", showNewExpensive
     $(document).on "change", "#expensive_category_id", loadSubcategories
+    $(document).on "click", ".js-delete-expense", onClick_DeleteExpense
     $("#container-expensive").on "show", initLoadForFilters
     $(".container").on "click", ".js-reset-filter", resetFilters
     $(window).load initLoadForFilters
+
     return
 
   renderFormErrors = (event, jqxhr, settings, exception)->
@@ -91,6 +93,37 @@ window.ExpensiveIndexController = ((expensiveServices)->
   failLoadSubcategories = (err)->
     console.log(err);
     ###$('body').append "AJAX Error: " + err###
+    return
+
+  onClick_DeleteExpense = (e)->
+    e.preventDefault()
+    expenseId = $(this).attr("data-id")
+    confirm = $(this).attr("data-message")
+    bootbox.confirm
+      message: confirm
+      buttons:
+        confirm:
+          label: 'Yes'
+          className: 'btn-success'
+        cancel:
+          label: 'Not'
+          className: 'btn-danger'
+      callback: (result) ->
+        if result
+          onDelete_Expense(expenseId)
+          console.log 'onClick Delete expense was logged in the callback: ' + result
+        return
+
+  onDelete_Expense = (id)->
+    console.log "Call services: " + id
+    expensiveServices.deleteExpense(id, doneDeleteExpense, failDeleteExpense)
+
+  doneDeleteExpense = (data)->
+    console.log "done: " + data
+    return
+
+  failDeleteExpense = (err)->
+    console.log "fail: " + err
     return
 
   return{

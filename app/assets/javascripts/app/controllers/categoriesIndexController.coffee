@@ -16,7 +16,7 @@ window.CategoriesIndexController = ((categoriesServices)->
           label: 'Yes'
           className: 'btn-success'
         cancel:
-          label: 'No'
+          label: 'Not'
           className: 'btn-danger'
       callback: (result) ->
         if result

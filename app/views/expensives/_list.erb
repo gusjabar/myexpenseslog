@@ -3,7 +3,7 @@
     <thead>
     <tr>
       <th><%= filterrific_sorting_link(@filterrific, :amount) %></th>
-      <th><%= filterrific_sorting_link(@filterrific, :logdate)%></th>
+      <th><%= filterrific_sorting_link(@filterrific, :logdate) %></th>
       <th><%= filterrific_sorting_link(@filterrific, :note) %></th>
       <th>Category</th>
       <th>Subcategory</th>
@@ -19,9 +19,19 @@
           <td><%= expensive.note %></td>
           <td><%= expensive.category %></td>
           <td><%= expensive.subcategory %></td>
-          <td><%= link_to 'Show', expensive %></td>
-          <td><%= link_to 'Edit', edit_expensife_path(expensive) %></td>
-          <td><%= link_to 'Destroy', expensive, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+          <td>
+            <a href="<%= expensife_path(expensive) %>" class="btn btn-info" role="button">
+              <i class="fa fa-info" aria-hidden="true"></i></a>
+          <td>
+            <a href="<%= edit_expensife_path(expensive) %>" class="btn btn-success" role="button">
+              <i class="fa fa-pencil" aria-hidden="true"></i></a>
+          </td>
+          <td>
+            <a href="#" class="btn btn-danger js-delete-expense" role="button"
+              data-message="Are you sure to delete this log: $ <%= expensive.amount %>"
+              data-id="<%= expensive.id %>"><i class="fa fa-trash" aria-hidden="true"></i></a>
+
+          </td>
         </tr>
     <% end %>
     </tbody>

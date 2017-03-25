@@ -21,15 +21,48 @@
 //= require libs/utils-form
 //= require_tree ./app/services
 //= require_tree ./app/controllers
+//= require expensives
 
 
-
-$(document).ready(function() {
+$(document).ready(function () {
     window.ExpensiveIndexController.init();
     window.CategoriesIndexController.init();
     $('select').select2({
         theme: "bootstrap"
     });
+
+
+    $.rails.allowAction = function (element) {
+        var message = element.data('confirm'),
+            answer = false, callback;
+        if (!message) {
+            return true;
+        }
+
+        if ($.rails.fire(element, 'confirm')) {
+            myCustomConfirmBox(message, function () {
+                callback = $.rails.fire(element,
+                    'confirm:complete', [answer]);
+                if (callback) {
+                    var oldAllowAction = $.rails.allowAction;
+                    $.rails.allowAction = function () {
+                        return true;
+                    };
+                    element.trigger('click');
+                    $.rails.allowAction = oldAllowAction;
+                }
+            });
+        }
+        return false;
+    }
+
+    function myCustomConfirmBox(message, callback) {
+        bootbox.confirm(message, function (confirmed) {
+            if (confirmed) {
+                callback();
+            }
+        });
+    }
 
 });
 
