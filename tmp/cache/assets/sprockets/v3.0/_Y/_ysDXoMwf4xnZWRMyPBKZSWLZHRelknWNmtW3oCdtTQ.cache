@@ -1,0 +1,33 @@
+I"â(function() {
+  console.log("loaded category script");
+
+  $.ajax({
+    url: "/api/catalog/getSubcategories/8",
+    dataType: "html",
+    error: function(jqXHR, textStatus, errorThrown) {
+      return $('body').append("AJAX Error: " + textStatus);
+    },
+    success: function(data, textStatus, jqXHR) {
+      var categories, list;
+      categories = JSON.parse(data);
+      list = "<ul>";
+      $.each(categories, function(index) {
+        var subcategories;
+        subcategories = categories[index]["Subcategory"];
+        if (subcategories) {
+          list += "<li>" + categories[index]["Name"] + "<ul>";
+          $.each(subcategories, function(subIndex) {
+            return list += "<li>" + subcategories[subIndex]["Name"] + "</li>";
+          });
+          return list += "</ul></li>";
+        } else {
+          return list += "<li>" + categories[index]["Name"] + "</li>";
+        }
+      });
+      list += "</ul>";
+      return $('#content').append(list);
+    }
+  });
+
+}).call(this);
+:ET

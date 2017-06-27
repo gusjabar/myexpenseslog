@@ -1,0 +1,11 @@
+I"k
+/*
+$(document).ready ->
+  $('select').select2 theme: "bootstrap"
+ */
+
+(function() {
+
+
+}).call(this);
+:ET

@@ -1,0 +1,27 @@
+
+<%= form_for(@subcategory, :html => {:class => "form-inline"}) do |f| %>
+    <div class="form-group">
+      <% if @subcategory.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@subcategory.errors.count, "error") %> prohibited this subcategory from being saved:</h2>
+
+            <ul>
+              <% @subcategory.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+      <% end %>
+    </div>
+    <div class="field form-group">
+      <%= f.text_field :Name, placeholder: "Enter a Subcategory name...", class: "form-control" %>
+    </div>
+    <div class="field form-group">
+      <%= f.collection_select(:category_id, Category.all, :id, :name, {include_blank: "Select a Category"}, class: "form-control") %>
+    </div>
+
+    <div class="form-group text-right">
+      <%= f.submit "Save", :class => "btn btn-primary" %>
+    </div>
+
+<% end %>

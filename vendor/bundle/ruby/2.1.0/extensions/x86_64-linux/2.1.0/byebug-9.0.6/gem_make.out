@@ -1,0 +1,20 @@
+current directory: /home/gustavo/projects/lazyexpense/trackmyexpensive/vendor/bundle/ruby/2.1.0/gems/byebug-9.0.6/ext/byebug
+/usr/bin/ruby2.1 -r ./siteconf20161210-8955-1s89d8x.rb extconf.rb
+creating Makefile
+
+current directory: /home/gustavo/projects/lazyexpense/trackmyexpensive/vendor/bundle/ruby/2.1.0/gems/byebug-9.0.6/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /home/gustavo/projects/lazyexpense/trackmyexpensive/vendor/bundle/ruby/2.1.0/gems/byebug-9.0.6/ext/byebug
+make "DESTDIR="
+compiling breakpoint.c
+compiling threads.c
+compiling context.c
+compiling locker.c
+compiling byebug.c
+linking shared-object byebug/byebug.so
+
+current directory: /home/gustavo/projects/lazyexpense/trackmyexpensive/vendor/bundle/ruby/2.1.0/gems/byebug-9.0.6/ext/byebug
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.so ./.gem.20161210-8955-lc1gw1/byebug
+installing default byebug libraries

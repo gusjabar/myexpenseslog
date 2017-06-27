@@ -1,0 +1,83 @@
+I"m
+/*window.categorySelect = $("#expensive_category_id")
+subCategorySelect = $("#expensive_subcategory_id")
+ */
+
+(function() {
+  window.ExpensiveIndexController = (function(expensiveServices) {
+    var doneLoadSubcategories, doneLoadSubcategoriesModal, failLoadSubcategories, init, initLoadForFilters, loadSubcategories, resetFilters, showNewExpensive;
+    init = function() {
+      $(document).on("click", "#btnAddNewExpensive", showNewExpensive);
+      $(document).on('change', "#expensive_category_id", loadSubcategories);
+      $('#container-expensive').on('show', initLoadForFilters);
+      $(".container").on("click", ".js-reset-filter", resetFilters);
+      $(window).load(initLoadForFilters);
+    };
+    showNewExpensive = function() {
+      console.log("btn click");
+      expensiveServices.createNewExpensive(doneLoadSubcategoriesModal, failLoadSubcategories);
+    };
+    doneLoadSubcategoriesModal = function(html) {
+      var dialog;
+      dialog = bootbox.dialog({
+        title: "New Expense",
+        message: html,
+        closeButton: true
+      });
+      dialog.init(function() {
+        $('.datepicker').datepicker();
+        $(".bootbox").removeAttr("tabindex");
+        $('select').select2({
+          theme: 'bootstrap'
+        });
+        $("span.select2.select2-container").removeAttr("style");
+        return $(".select2 .select2-container").css("width", "100%");
+      });
+    };
+    failLoadSubcategories = function(err) {
+      console.log(err);
+    };
+    loadSubcategories = function() {
+      var categoryId;
+      $("#expensive_subcategory_id").empty();
+      $("#expensive_subcategory_id").select2({
+        placeholder: "Select a Subcategory"
+      });
+      categoryId = $("#expensive_category_id").val();
+      console.log(categoryId);
+      expensiveServices.loadSubcategories(categoryId, doneLoadSubcategories, failLoadSubcategories);
+    };
+    doneLoadSubcategories = function(data) {
+      var category, subcategories;
+      $("#expensive_subcategory_id").select2({
+        theme: "bootstrap"
+      }, category = JSON.parse(data), subcategories = category["Subcategory"], subcategories.length > 0 ? ($(".js-new-subcategory").hide(), $("#expensive_subcategory_id").prop('disabled', false), $.each(subcategories, function(index) {
+        return $("#expensive_subcategory_id").append("<option value=" + subcategories[index]["id"] + ">" + subcategories[index]["Name"] + "</option>");
+      })) : ($("#expensive_subcategory_id").append("<option value='-1'> Subcategory is requierd</option>"), $("#expensive_subcategory_id").prop('disabled', true), $(".js-new-subcategory").show()));
+    };
+    initLoadForFilters = function() {
+      console.log('initLoadForFilters');
+      $('select').select2;
+      $('select').select2({
+        theme: 'bootstrap'
+      });
+      $("span.select2.select2-container").removeAttr("style");
+      $(".select2 .select2-container").css("width", "100%");
+    };
+    resetFilters = function() {
+      console.log('resetSelect2Values');
+      $("#filterrific_filter")[0].reset();
+      $('#filterrific_with_category_id').select2('val', 0);
+      $('#filterrific_sorted_by').select2('val', 'created_at_desc');
+      $('#filterrific_sorted_by').val("created_at_desc").trigger("change");
+    };
+    failLoadSubcategories = function(err) {
+      $('body').append("AJAX Error: " + err);
+    };
+    return {
+      init: init
+    };
+  })(window.ExpensiveServices);
+
+}).call(this);
+:ET

@@ -1,0 +1,55 @@
+<%= form_for @expensive, remote: true, :html => {role: :form, :class => "form-horizontal", 'data-model' => 'expensive'} do |f| %>
+
+    <div class="form-group">
+      <% if expensive.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@expensive.errors.count, "error") %> prohibited this expenses from being saved:</h2>
+
+            <ul>
+              <% @expensive.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+      <% end %>
+    </div>
+    <div class="field form-group">
+      <%= f.label :amount, :class => "control-label" %>
+      <%= f.number_field :amount, :class => "form-control", min: 0, value: number_to_currency(f.object.amount.to_f, delimiter: '', unit: ''), step: :any %>
+      <span class="help-block"></span>
+    </div>
+
+    <div class="field form-group">
+      <%= f.label :logdate, :class => "control-label" %>
+      <div class="calendar-pickup">
+        <%= f.date_field :logdate, :class => "form-control", placeholder: "MM-dd-yyyy" %>
+        <span class="help-block"></span>
+      </div>
+    </div>
+
+    <div class="field form-group">
+      <%= f.label :note, :class => "control-label" %>
+      <%= f.text_area :note, :class => "form-control" %>
+      <span class="help-block"></span>
+    </div>
+
+    <div class="field form-group">
+      <%= f.label :Category, :class => "control-label" %><br/>
+      <%= f.collection_select(:category_id, Category.all, :id, :name, {include_blank: "Select a Category"}, {:class => "form-control"}) %>
+      <span class="help-block"></span>
+    </div>
+
+    <div class="field form-group">
+      <%= f.label :Subcategory, :class => "control-label" %><br/>
+      <%= f.collection_select(:subcategory_id, {}, :id, :Name, {include_blank: "Select a Subcategory"}, :class => "form-control") %>
+      <span class="help-block"></span>
+    </div>
+    <div class="js-new-subcategory form-group">
+      <%= link_to "New Subcategory", new_subcategory_path, class: "btn btn-primary" %>
+    </div>
+    <div class="form-group text-right">
+      <%= button_tag type: 'submit', class: "btn btn-primary" do %>
+          <i class="fa fa-floppy-o" aria-hidden="true"></i> Save
+      <% end %>
+    </div>
+<% end %>

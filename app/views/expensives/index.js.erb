@@ -1,0 +1,13 @@
+<%# app/views/expensives/index.js.erb %>
+<% js = escape_javascript(
+    render(partial: 'expensives/list', locals: { expensives: @expensives})
+) %>
+
+$("#container-expensive").html("<%= js %>");
+
+$('#paginator').html('<%= escape_javascript(paginate(@expensives, :remote => true).to_s) %>');
+
+
+
+
+
